@@ -1,0 +1,27 @@
+package com.samuelangan.mycompagny.domain;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import java.io.Serializable;
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+/**
+ * An authority (a security role) used by Spring Security.
+ */
+@Document(collection = "authority")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+@Getter
+public class Authority implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @NotNull
+    @Size(max = 50)
+    @Id
+    private String name;
+}

@@ -126,6 +126,12 @@ dependencies {
     testRuntimeOnly("com.tngtech.archunit:archunit-junit5-engine:${archunitJunit5Version}") {
         exclude group: "org.slf4j", module: "slf4j-api"
     }
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
     implementation "io.micrometer:micrometer-registry-prometheus-simpleclient"
     implementation "jakarta.annotation:jakarta.annotation-api"
     implementation "org.apache.commons:commons-lang3"
