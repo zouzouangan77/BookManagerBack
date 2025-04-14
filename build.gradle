@@ -154,14 +154,21 @@ dependencies {
         }
     }
     implementation "org.springframework.boot:spring-boot-starter-validation"
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
     implementation "org.springframework.boot:spring-boot-starter-web"
     testImplementation "org.springframework.boot:spring-boot-test"
+    implementation"org.zalando:problem-spring-web-starter:0.29.1"
     implementation "org.springframework.cloud:spring-cloud-starter"
     implementation "org.springframework.cloud:spring-cloud-starter-bootstrap"
     implementation "org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j"
     implementation "org.springframework.cloud:spring-cloud-starter-consul-config"
     implementation "org.springframework.cloud:spring-cloud-starter-consul-discovery"
     implementation "org.springframework.retry:spring-retry"
+    implementation "com.google.zxing:core:3.5.1"
+    implementation "com.google.zxing:javase:3.5.1"
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
     testImplementation "org.springframework.security:spring-security-test"
     implementation platform(libs.spring.cloud.dependencies)
     implementation platform(libs.mongock.bom)
@@ -170,10 +177,12 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-data-mongodb"
     implementation "io.mongock:mongock-springboot-v3"
     implementation "io.mongock:mongodb-springdata-v4-driver"
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     testImplementation "org.testcontainers:junit-jupiter"
     testImplementation "org.testcontainers:mongodb"
     testImplementation "org.testcontainers:testcontainers"
     developmentOnly "org.springframework.boot:spring-boot-docker-compose"
+
     // jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 }
 
