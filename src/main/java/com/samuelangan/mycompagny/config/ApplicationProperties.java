@@ -10,6 +10,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @ConfigurationProperties(prefix = "application", ignoreUnknownFields = false)
 public class ApplicationProperties {
+
+    private String version;
+    private String name;
+    private String baseUrlInfoBox;
+    private String baseUrlInfoOrder;
     // jhipster-needle-application-properties-property
 
     // jhipster-needle-application-properties-property-getter
