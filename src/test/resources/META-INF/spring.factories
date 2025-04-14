@@ -1,0 +1,5 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    com.samuelangan.mycompagny.config.\
+    TestContainersSpringContextCustomizerFactory,com.samuelangan.mycompagny.\
+    config.RedisTestContainersSpringContextCustomizerFactory,com.samuelangan.\
+    mycompagny.config.KafkaTestContainersSpringContextCustomizerFactory
